@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/img
+media_folder: src/img
 public_folder: /img
 
 collections:
@@ -10,18 +10,41 @@ collections:
     label: "Blog"
     folder: "src/pages/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Category", name: "category", widget: "select", options: ["User Experience", "Digital Strategy", "Digital Marketing", "Interface Design", "Inclusive Design", "Working in Digital"]}
       - {label: "Tags", name: "tags", widget: "list"}
+
+  - name: "cases"
+    label: "Cases"
+    folder: "src/pages/case-study"
+    create: true
+    slug: "{{slug}}"
+    fields:
+    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "case-page"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Publish Date", name: "date", widget: "datetime"}
+    - {label: "Description", name: "description", widget: "text"}
+    - {label: "Body", name: "body", widget: "markdown"}
+    - {label: "Hero Image", name: "heroImage", widget: custompathimage, customMediaPath: "../../img/", rawMediaPath: "https://raw.githubusercontent.com/filippoferri/filippoferri-ux/src/static/img/"}
 
   - name: "pages"
     label: "Pages"
     files:
+
+    - file: "src/pages/index.md"
+      label: "Home"
+      name: "home"
+      fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Hero Image", name: "heroImage", widget: custompathimage, customMediaPath: "../../img/", rawMediaPath: "https://raw.githubusercontent.com/filippoferri/student-hotels-it/src/static/img/"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

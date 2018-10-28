@@ -1,0 +1,29 @@
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Lato:600|Merriweather:300,400,400i,700,700i')
+
+$family-serif: 'Merriweather', 'Georgia', serif
+
+$family-primary: $family-serif !default
+$family-heading: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial',  sans-serif
+
+// General
+h1,h2,h3,h4,h5,h6,
+.title,
+.menu-label
+  font-family: $family-heading
+  font-weight: 600
+  text-transform: uppercase
+
+// General
+a,
+button
+  transition: all .2s ease-in-out
+
+p a,
+li a
+  border-bottom: 1px solid rgba(0,0,0,.25)
+  line-height: .95
+  transition: all .2s ease-in-out
+
+  &:hover
+    border-color: rgba(0,0,0,.65)

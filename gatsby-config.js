@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Filippo Ferri | Consulente di User Experience e Design',
+    author: 'Filippo Ferri - filippoferri.it',
+    description: 'Want to create an experience that people loveand use design to grow your business? Want help doing user research or navigating your UX career? RECE',
+    siteUrl: 'https://filippoferri.it',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -24,7 +27,7 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [],
+        plugins: ['gatsby-remark-copy-linked-files'],
       },
     },
     {

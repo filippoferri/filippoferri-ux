@@ -1,11 +1,14 @@
 @import "~bulma/sass/utilities/initial-variables"
 
-// Config vars
-$kaldi-red: #FD461E
-$kaldi-red-invert: #fff
+// Utils
+@import "utils/_variables"
+@import "utils/_helpers"
+@import "utils/_base"
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+// Components
+@import "components/_navbar"
+@import "components/_footer"
+@import "components/_hero"
 
 .content .taglist
   list-style: none
