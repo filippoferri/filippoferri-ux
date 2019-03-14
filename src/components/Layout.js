@@ -28,12 +28,9 @@ const TemplateWrapper = ({ children }) => (
       acceptOnScrollPercentage={25}
       cookieName="filippoferri.it"
       disableStyles={true}
-      debug={true}
-
       buttonClasses="sh-cookie-bar-close"
       containerClasses="sh-cookie-bar-container"
       contentClasses=""
-
       buttonText="Close"
       extraCookieOptions={{domain: '//studenthotels.it'}}>
       This website uses cookies. Click  <Link to="/legals/privacy-policy">here</Link> for more information. If that’s okay with you, just keep browsing.
