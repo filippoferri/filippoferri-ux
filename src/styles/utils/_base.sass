@@ -1,29 +1,107 @@
 // Typography
-@import url('https://fonts.googleapis.com/css?family=Lato:600|Merriweather:300,400,400i,700,700i')
+//@import url('https://fonts.googleapis.com/css?family=Lato:600|Merriweather:400,400i,700,700i')
+@import url('https://fonts.googleapis.com/css?family=Lato:600|Open+Sans:400,400i,700,700i')
 
 $family-serif: 'Merriweather', 'Georgia', serif
+$family-sans-serif: 'Open Sans', 'Helevtica Neue', sans-serif
 
-$family-primary: $family-serif !default
-$family-heading: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial',  sans-serif
+$family-primary: $family-sans-serif !default
+$family-heading: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
 
 // General
-h1,h2,h3,h4,h5,h6,
+h1, h2, h3, h4, h5, h6,
 .title,
 .menu-label
   font-family: $family-heading
   font-weight: 600
   text-transform: uppercase
 
-// General
+*:before,
+*:after
+  box-sizing: border-box
+
+*::selection
+  background-color: $warning
+  color: #000000
+
+.section
+  position: relative
+
+// Link
+a
+  color: $black
+  //text-decoration: none
+
+
 a,
 button
   transition: all .2s ease-in-out
 
 p a,
 li a
-  border-bottom: 1px solid rgba(0,0,0,.25)
+  //border-bottom: 2px solid $primary
+  box-shadow: inset 0 -2px 0 $primary
+  transition: background .15s cubic-bezier(.33, .66, .66, 1)
+  line-height: .95
+  //transition: all .2s ease-in-out
+
+  &:hover
+    color: inherit
+    background-color: $warning
+
+
+footer li a,
+footer p a
+  border-bottom: 1px solid rgba(0, 0, 0, .25)
   line-height: .95
   transition: all .2s ease-in-out
 
   &:hover
-    border-color: rgba(0,0,0,.65)
+    border-color: rgba(0, 0, 0, .65)
+
+// button
+a.button
+  border-radius: .1875rem
+  transition: all .3s ease-in-out
+  font-family: $family-heading
+  text-transform: uppercase
+
+  &.is-primary,
+  &.is-primary:hover
+    color: $black
+
+button.button
+  border-radius: .1875rem
+  font-family: $family-heading
+  text-transform: uppercase
+
+
+// images
+.is-image-wrapper
+  position: relative
+  display: block
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+  img
+    width: 100%
+    height: 100%
+    object-position: 50% 50%
+    object-fit: cover
+    font-family: 'object-position: 50% 50%; object-fit: cover;'
+
+  &.is-bordered
+
+    img
+      border-radius: .1875rem
+
+  &.has-position-absolute
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+    .gatsby-image-wrapper
+      height: 100%

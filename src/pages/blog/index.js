@@ -2,8 +2,39 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
+import Img from "gatsby-image";
 
 export default class BlogPage extends React.Component {
+
+  variation(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  addClass() {
+    var newclass;
+    const num = this.variation(1, 4);
+
+    switch (num) {
+      case 1:
+        newclass = " is-secondary";
+        break;
+      case 2:
+        newclass = " is-greenish";
+        break;
+      case 3:
+        newclass = " is-sunset";
+        break;
+      default:
+        newclass = " is-primary";
+    }
+
+    return newclass;
+  }
+
+  findImage(image, title) {
+    return <div className="is-image-wrapper has-position-absolute is-bordered"><Img sizes={image} alt={title} /></div>
+  }
+
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
@@ -12,34 +43,30 @@ export default class BlogPage extends React.Component {
       <Layout>
         <section className="section">
           <div className="container">
-            <div className="content has-text-centered">
-              <h3 className="">Blog</h3>
-            </div>
             <div className="columns">
-              <div className="column is-12-tablet is-6-desktop is-offset-3-desktop">
-                {posts
-                  .map(({ node: post }) => (
-                    <div
-                      className="content"
-                      key={post.id}
-                    >
-                      <p>
-                        <Link className="has-text-primary" to={post.fields.slug}>
-                          {post.frontmatter.title}
-                        </Link>
-                      </p>
-                      <p>
-                        {post.frontmatter.description}
-                        <br/>
-                        <br/>
-                        <Link className="button is-small" to={post.fields.slug}>
-                          Continua a leggere
-                        </Link>
-                      </p>
-                    </div>
-                  ))}
-              </div>
+              <div className="column is-4-desktop is-offset-1-desktop">
+            <div className="content">
+              <h1 className="title is-3" style={{marginTop: '3rem'}}>Blog</h1>
+              <p>I'm passionate about sharing knowledge. I continuously publish articles to open source my thinking.</p>
             </div>
+            </div>
+            </div>
+          </div>
+        </section>
+        <section className="section">
+          <div className="container">
+            <div className="columns">
+              {posts
+                .map(({ node: post }, index) => (
+                  <div key={index} className="column is-6-tablet is-4-desktop">
+                    <article>
+                      <Link to={post.fields.slug} className={"blog-block-image is-paddingless" + this.addClass()}>{this.findImage(post.frontmatter.heroImage.childImageSharp.sizes, post.frontmatter.title)}</Link>
+                      <Link to={post.fields.slug} className="blog-block-title">{post.frontmatter.title}</Link>
+                    </article>
+                  </div>
+                ))}
+            </div>
+            <div className="article-end"></div>
           </div>
         </section>
       </Layout>
@@ -72,6 +99,13 @@ export const pageQuery = graphql`
             description
             templateKey
             date(formatString: "DD MMMM, YYYY", locale: "it")
+            heroImage {
+              childImageSharp {
+                sizes(maxWidth: 400) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }

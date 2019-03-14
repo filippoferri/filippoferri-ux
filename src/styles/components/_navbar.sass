@@ -1,13 +1,73 @@
 $navbar-height: 5rem
 
 .navbar-brand
+  padding: 0 1rem
   text-transform: uppercase
   font-family: $family-heading
   font-size: 1.5rem
   font-weight: 700
+  background: $primary
 
   a.navbar-item:hover
-    color: white
+    color: $black
+
+  .navbar-burger
+    margin-right: -1rem
+    outline: none
+
+    &:hover
+      background-color: transparent
 
 .navbar-menu .navbar-item
+  position: relative
   font-weight: 300
+
+  &.navbar-last-item
+
+    &:before
+      content: ''
+      display: inline-block
+      width: 1px
+      height: 30px
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      border-left: 1px solid rgba(0,0,0,.1)
+
+    &:after
+      left: 0
+      right: auto
+
+    &:hover:after
+      width: 100%
+
+  &:after
+    position: absolute
+    z-index: -1
+    right: 0
+    bottom: 12px
+    content: ""
+    display: block
+    height: 10px
+    width: 0
+    background-color: transparent
+    background-color: $warning
+    margin: 1em 0
+    transition: width 0.5s cubic-bezier(0.23, 1, 0.32, 1)
+
+  &:hover:after
+    width: 100%
+
+
+@media screen and (max-width: $desktop)
+  .navbar-menu.is-active
+    position: absolute
+    width: 100%
+
+    .navbar-item
+      padding: 0.5rem 1.5rem
+
+@media screen and (min-width: $desktop)
+  .navbar.has-background-white > .container .navbar-brand
+    margin-left: 0

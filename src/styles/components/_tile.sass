@@ -1,0 +1,70 @@
+.square-tile-wrapper
+  display: flex
+  flex-direction: column
+
+  @media (min-width: $tablet)
+    flex-direction: row
+
+  .square-tile
+    display: flex
+    height: auto
+    position: relative
+    flex: 1 0 auto
+    justify-content: center
+    align-items: center
+    background: center no-repeat
+    background-size: cover
+    background: $primary
+
+    @media (min-width: $tablet)
+      width: 33.3333%
+
+    &:before
+      content: ''
+      display: table
+      padding-top: 100%
+
+    &:after
+      content: ''
+      display: block
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 5
+      background-color: rgba(0,0,0,.6)
+      transition: all .2s ease-in-out
+
+    a
+      display: block
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 20
+
+    &:hover:after
+      background-color: rgba(0,0,0,.8)
+
+    .square-tile-content
+      width: 100%
+      padding: 0 3rem
+      color: white
+      font-family: $family-heading
+      font-size: 1.5rem
+      text-transform: uppercase
+      line-height: 1.3
+      z-index: 10
+
+      div
+        font-family: $family-heading
+        text-transform: uppercase
+        font-weight: 600
+        font-size: .8rem
+        color: $primary

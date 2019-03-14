@@ -1,0 +1,142 @@
+.related-post
+  display: flex
+  padding: 0 1.5rem
+  position: relative
+  flex-direction: column
+
+  .related-post-left,
+  .related-post-right
+    display: flex
+    margin-bottom: 1rem
+    position: relative
+    align-items: center
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      background-color: rgba(0,0,0,.6)
+      transition: all .2s ease-in-out
+      z-index: 1
+
+
+    .related-post-title
+      padding: 3rem 1rem
+      color: white
+      font-size: 1.5rem
+      line-height: 1.4
+      z-index: 2
+      transition: all .2s ease-in-out
+
+      .related-post-label
+        text-transform: uppercase
+        font-size: .8rem
+        font-family: $family-heading
+        color: $primary
+
+    &:hover
+
+      &:after
+        background-color: rgba(0,0,0,.8)
+
+  .related-post-link
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: 3
+
+  > div
+    flex: 1 1 auto
+
+  @media (min-width: $tablet)
+    flex-direction: row
+    padding: 0
+
+    .related-post-left,
+    .related-post-right
+      flex: 50%
+      margin-bottom: 0
+
+    .related-post-left
+      .related-post-title
+        padding: 5rem 3rem
+
+    .related-post-right
+      .related-post-title
+        text-align: right
+        padding: 5rem 3rem
+
+
+  @media (min-width: $desktop)
+    flex-direction: row
+
+    .related-post-left,
+    .related-post-right
+      flex: 50%
+
+    .related-post-left
+      .related-post-title
+        padding: 10rem 6rem 10rem 3rem
+
+
+    .related-post-right
+      .related-post-title
+        text-align: right
+        padding: 10rem 3rem 10rem 6rem
+
+.prev-post,
+.next-post
+  position: relative
+  padding: 10rem 0
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0,0,0,.6)
+    z-index: 0
+    transition: all .2s ease-in-out
+
+  .container
+    z-index: 2
+    margin: 0 .75rem
+
+    @media (min-width: $desktop)
+      margin: 0
+
+    .related-post-label
+      font-family: $family-heading
+      text-transform: uppercase
+      color: $primary
+
+    .related-post-title
+      color: white
+      font-size: 2rem
+      line-height: 1.4
+      transition: all .2s ease-in-out
+
+
+  .related-post-link
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 3
+
+  &:hover
+
+    &:after
+      background-color: rgba(0,0,0,.8)

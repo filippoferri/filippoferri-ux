@@ -1,95 +1,229 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { kebabCase } from "lodash";
+import Helmet from "react-helmet";
+import { graphql, Link } from "gatsby";
+
+import Layout from "../components/Layout";
+import RelatedPosts from "../components/RelatedPosts";
+import Content, { HTMLContent } from "../components/Content";
+import Hero from "../components/Hero";
+import SharePost from "../components/SharePost";
+import AddDisqus from "../components/Disqus";
 
 export const BlogPostTemplate = ({
-  content,
-  contentComponent,
-  description,
-  tags,
-  title,
-  helmet,
-}) => {
-  const PostContent = contentComponent || Content
+    currentId,
+    content,
+    contentComponent,
+    slug,
+    date,
+    description,
+    tags,
+    title,
+    helmet,
+    heroImage,
+    category,
+    nextId,
+    nextTitle,
+    nextSlug,
+    nextHeroImage,
+    prevId,
+    prevTitle,
+    prevSlug,
+    prevHeroImage
+  }) => {
+
+  const path = "https://filippoferri.it/" + slug;
+  const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
+    <main>
+      {helmet || ""}
+      <Hero image={heroImage.childImageSharp.sizes} heading={title} addClass="is-post" category={category}/>
+
+      <section className="section">
+
+        <div className="container content">
+          <div className="columns">
+            <div className="column is-8 is-offset-2">
+
+              <p><i>{description}</i></p>
+              <p><i>{currentId}</i></p>
+              <p><i>{nextId}</i></p>
+              <p><i>{prevId}</i></p>
+              <PostContent content={content}/>
+
+              <div className="is-content-section">
+                <SharePost shareUrl={path} title={title} media={heroImage.childImageSharp.sizes.src}/>
+                <div className="has-text-right">{date}</div>
               </div>
-            ) : null}
+
+              {tags && tags.length ? (
+                <div>
+                  <p className="menu-label">Ho parlato di:</p>
+                  <div className="tags are-medium">
+                    {tags.map((tag, index) => (
+                      <Link key={index} className="tag is-primary has-text-black"
+                            to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  )
-}
+      </section>
+
+      <RelatedPosts
+        currentId={currentId}
+
+        nextId={nextId}
+        nextTitle={nextTitle}
+        nextSlug={nextSlug}
+        nextHeroImage={nextHeroImage}
+
+        prevId={prevId}
+        prevTitle={prevTitle}
+        prevSlug={prevSlug}
+        prevHeroImage={prevHeroImage}
+
+      />
+
+      <section className="section is-medium" name="conversation">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-8-desktop is-offset-2-desktop has-margin-bottom">
+
+              <div className="content">
+                <AddDisqus title={title} url={path}/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  );
+};
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.instanceOf(Helmet),
-}
+  title: PropTypes.string
+  //helmet: PropTypes.instanceOf(Helmet)
+};
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { current: post } = data;
+  const { next: nextPost } = data;
+  const { prev: prevPost } = data;
+
+  if (nextPost !== null) {
+    var nextId = nextPost.id;
+    var nextTitle = nextPost.frontmatter.title;
+    var nextSlug = nextPost.fields.slug;
+    var nextHeroImage = nextPost.frontmatter.heroImage;
+  }
+
+  if (prevPost !== null) {
+    var prevId = prevPost.id;
+    var prevTitle = prevPost.frontmatter.title;
+    var prevSlug = prevPost.fields.slug;
+    var prevHeroImage = prevPost.frontmatter.heroImage;
+  }
 
   return (
     <Layout>
       <BlogPostTemplate
+        currentId={post.id}
         content={post.html}
         contentComponent={HTMLContent}
+        slug={post.fields.slug}
+        date={post.frontmatter.date}
         description={post.frontmatter.description}
-        helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
+        helmet={<Helmet title={`${post.frontmatter.title} | Blog`}/>}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        category={post.frontmatter.category}
+        heroImage={post.frontmatter.heroImage}
+        nextId={nextId}
+        nextTitle={nextTitle}
+        nextSlug={nextSlug}
+        nextHeroImage={nextHeroImage}
+        prevId={prevId}
+        prevTitle={prevTitle}
+        prevSlug={prevSlug}
+        prevHeroImage={prevHeroImage}
       />
     </Layout>
-  )
-}
+  );
+};
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
+    markdownRemark: PropTypes.object
+  })
+};
 
-export default BlogPost
+export default BlogPost;
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query BlogPostByID($id: String!, $next: String!, $prev: String!) {
+    current: markdownRemark(id: { eq: $id }) {
       id
+      fields {
+        slug
+      }
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMMM, YYYY", locale: "it")
         title
         description
+        category
         tags
+        heroImage {
+          childImageSharp {
+            sizes(maxWidth: 600) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+    next: markdownRemark(id: { eq: $next }) {
+      id
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        heroImage {
+          childImageSharp {
+            sizes(maxWidth: 600) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+    prev: markdownRemark(id: { eq: $prev }) {
+      id
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        heroImage {
+          childImageSharp {
+            sizes(maxWidth: 600) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
   }
-`
+`;

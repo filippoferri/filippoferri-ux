@@ -1,113 +1,159 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
+
 import Layout from "../components/Layout";
+import HeroHome from "../components/HeroHome";
+import FeaturedCases from "../components/FeaturedCases";
+// import LatestPosts from "../components/LatestPosts";
 
-export default class IndexPage extends React.Component {
-  render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+import Icon1 from "../img/svg/product-design.svg";
+import Icon2 from "../img/svg/user-research.svg";
+import Icon3 from "../img/svg/usability-testing.svg";
+import Icon4 from "../img/svg/brand-identity.svg";
+import planImg from "../img/svg/design-thinking.svg";
 
-    return (
-      <Layout>
-        <section className="hero is-medium has-background-primary">
-          <div className="hero-body">
-            <div className="container has-text-centered">
-              <h1>Ottimizza la User Experience dei tuoi servizi</h1>
-              <p className="subtitle">Crea un'esperienza unica per gli utenti e un design performante per far crescere il tuo business</p>
-            </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="container">
-            <div className="columns is-multiline">
-              <div className="column is-one-third-tablet is-2-desktop is-offset-3-desktop">
-                <figure className="image is-128x128">
-                  <img className="is-rounded" src="https://source.unsplash.com/d-MfHM-jHwc/300x300" alt="Filippo Ferri"/>
-                </figure>
-              </div>
-              <div className="column is-two-third-tablet is-4-desktop">
-                <div className="content">
-                  <p>Mi chiamo Filippo Ferri. Sono <a href="/">Design
-                    Strategist</a>, <a href="/">Product Designer</a> e <a href="/">consulente di User Experience Design</a>. Il mio ruolo è quello di progettare servizi che le persone amano.</p><p>Lavoro a stretto contatto con le aziende durante il processo di sviluppo dei servizi, aiutandole a capire i propri utenti attraverso ricerche, strategie, prototipi e grafiche, al raggiungimento di una completa User Experience.</p>
-                </div>
-              </div>
-              <div className="column is-12-tablet is-6-desktop is-offset-3-desktop">
-                <div className="notification is-warning has-text-centered">
-                  <b>Vuoi saperne di più?</b> Scopri come posso migliorare i tuoi servizi.
-                </div>
+import skillsImg from "../img/jpg/skills.jpg";
+import uxImg from "../img/jpg/user-experience-filippoferri.jpg";
+
+export const IndexPageTemplate = ({ cases, articles }) => {
+
+  return (
+    <Layout>
+      <HeroHome heading="Skyrocket User Satisfaction And Conversions"/>
+
+      <section className="section is-medium has-background-primary">
+
+        <div className="container">
+          <div className="columns is-variable is-12">
+            <div className="column has-text-centered">
+              <div className="offer-block">
+                <img src={Icon1} alt="Product Design"/>
+                <h3 className="is-4">Product Design</h3>
+                <p>I design and build products that solve problems and delight users.</p>
               </div>
             </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="container">
-            <div className="columns is-multiline">
-              <div className="column is-12 has-text-centered">
-                <div className="content">
-                  <h3>Cerchi consulenza nella ricerca degli utenti o nella tua carriera di UX?</h3>
-                </div>
+            <div className="column has-text-centered">
+              <div className="offer-block">
+                <img src={Icon2} alt="User Research"/>
+                <h3 className="is-4">User Research</h3>
+                <p>I can improve your digital services understanding your users.</p>
               </div>
-              <div className="column is-6-tablet is-6-desktop is-offset-3-desktop">
-                <div className="content">
-                  <p>Posso aiutarvi a delineare la strategia di progettazione dei vostri servizi. Il principale obiettivo è di riorganizzare la struttura, l'architettura e le infrastrutture dei servizi migliorando la qualità dell'esperienza e dell'interazione tra voi e l'utente.</p>
-                  <p>Progettando servizi user-centric ha il vantaggio di offrire un'esperienza semplice, funzionale e piacevole al consumatore, rendendo voi fornitori dei servizi più competitivi sul mercato.</p>
-                </div>
+            </div>
+            <div className="column has-text-centered">
+              <div className="offer-block">
+                <img src={Icon3} alt="Usability Testing"/>
+                <h3 className="is-4">Usability Testing</h3>
+                <p>I can help discover if your services are being used effectively.</p>
+              </div>
+            </div>
+            <div className="column has-text-centered">
+              <div className="offer-block">
+                <img src={Icon4} alt="Brand Identity"/>
+                <h3 className="is-4">Brand Identity</h3>
+                <p>I simplify, elevate and build brands that transform and grow businesses.</p>
               </div>
             </div>
           </div>
-        </section>
-        <section className="section">
-          <div className="container">
-            <div className="content has-text-centered">
-              <h3 className="">Case Study</h3>
+        </div>
+
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="columns is-multiline is-vcentered">
+            <div className="column is-half-tablet is-5-desktop">
+              <div className="content">
+                <p className="subtitle is-marked">About me</p>
+                <h2 className="title has-marked-subtitle">Make Products<br/> People Will Love</h2>
+                <p>I'm a product person, continually looking for <span className="highlight">innovative solutions</span> that delight and surprise target users while always keeping their needs in mind.</p>
+                <p>More, I'm a trusted partner of product managers and business stakeholders with the ability to influence product evolution as a user advocate.</p>
+              </div>
             </div>
-            <div className="columns">
-              <div className="column is-12-tablet is-6-desktop is-offset-3-desktop">
-                {posts
-                  .map(({ node: post }) => (
-                    <div
-                      className="content"
-                      key={post.id}
-                    >
-                      <p>
-                        <Link className="has-text-primary" to={post.fields.slug}>
-                          {post.frontmatter.title}
-                        </Link>
-                      </p>
-                      <p>
-                        {post.frontmatter.description}
-                        <br/>
-                        <br/>
-                        <Link className="button is-small" to={post.fields.slug}>
-                          Keep Reading →
-                        </Link>
-                      </p>
-                    </div>
-                  ))}
+            <div className="column is-half-tablet is-6-desktop is-offset-1-desktop">
+              <img src={skillsImg} alt="Skills"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section is-small">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-8-desktop is-offset-2-desktop">
+              <div className="content is-quote">
+                Filippo is a great professional, problem solving expert and very inspired by the projects he is
+                involved.
+                <p className="cite">Talia Savchenko - <span className="is-small">OneAgent.co</span></p>
               </div>
             </div>
           </div>
-        </section>
-      </Layout>
-    );
-  }
-}
+        </div>
+      </section>
+
+      <FeaturedCases cases={cases}/>
+
+      <section className="section">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-6-tablet">
+              <div className="content">
+                <p className="subtitle is-marked">My Approach</p>
+                <h2 className="title has-marked-subtitle">Translate needs of users into delightful product experiences</h2>
+              </div>
+            </div>
+          </div>
+          <div className="columns is-multiline is-variable is-8-desktop">
+            <div className="column is-6-tablet">
+              <div className="content">
+                <p>I brainstorm and communicate conceptual ideas and detailed design explanation both verbally and visually. I own end-to-end design projects from research and ideation through to implementation for existing and new product lines.</p>
+                <img className={"gray-filter"} src={uxImg} alt="User Experience"/>
+              </div>
+            </div>
+            <div className="column is-6-tablet">
+              <div className="content">
+                <p>I contribute to product strategy and roadmaps through customer research and design explorations, and streamline the design process as well as prioritize and guide new projects based on company goals and business objectives.</p>
+                <p>I organize and run cross-team collaboration discussions and bring empathy, enthusiasm, and motivation to every interaction.</p>
+                <div className="floating-stats">
+                  <img src={planImg} alt="Improve Conversion"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/*
+      <LatestPosts posts={articles}/>
+      */}
+
+    </Layout>
+  );
+};
+
+const IndexPage = ({ data }) => {
+
+  const { cases: edges } = data;
+  const { posts: articles } = data;
+
+  return (
+    <IndexPageTemplate cases={edges} articles={articles}/>
+  );
+};
+
+export default IndexPage;
 
 IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
+  data: PropTypes.object.isRequired
 };
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      limit: 2
+  query HomeQuery {
+    cases: allMarkdownRemark(
+      limit: 3
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "case-page" } }}
+      filter: { frontmatter: { templateKey: { eq: "case-page" } },
+      }
     ) {
       edges {
         node {
@@ -117,9 +163,42 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            description
             templateKey
             date(formatString: "DD MMMM, YYYY", locale: "it")
+            heroImage {
+              childImageSharp {
+                sizes(maxWidth: 800) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    posts: allMarkdownRemark(
+      limit: 2
+      sort: { order: DESC, fields: [frontmatter___date] },
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } },
+      }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            templateKey
+            category
+            heroImage {
+              childImageSharp {
+                sizes(maxWidth: 600) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }

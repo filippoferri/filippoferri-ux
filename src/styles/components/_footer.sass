@@ -1,3 +1,6 @@
+footer
+  //border-top: 1px solid #cbd3d8
+
 .footer-section
   font-size: .9rem
   line-height: 1.8
@@ -5,7 +8,13 @@
   padding: 1.5rem
 
   @media (min-width: $desktop)
-    padding: 3rem 1.5rem 5rem
+    padding: 2rem 1.5rem 2rem
+
+    &.is-first
+      padding: 6rem 1.5rem 2rem
+
+    &.is-last
+      padding: 2rem 1.5rem 6rem
 
   a
     color: $black
@@ -30,7 +39,7 @@
   padding: 2rem 0
   position: relative
   font-size: .8rem
-  color: white
+  color: $black
 
   span
     display: block
@@ -44,10 +53,10 @@
   a
     display: inline-block
     padding: 0 2rem
-    color: white
+    color: $black
     text-decoration: underline
 
     &:hover
-      color: rgba(255,255,255,.8)
+      color: rgba(0,0,0,.8)
 
 

@@ -1,13 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: 'Filippo Ferri | Consulente di User Experience e Design',
+    title: 'Filippo Ferri | Product and UX Design Expert',
     author: 'Filippo Ferri - filippoferri.it',
-    description: 'Want to create an experience that people loveand use design to grow your business? Want help doing user research or navigating your UX career? RECE',
+    description: 'Want to create an experience that people love and use design to grow your business? Want help doing user research or navigating your UX career?',
     siteUrl: 'https://filippoferri.it',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-plugin-remove-trailing-slashes',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -27,7 +28,10 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: ['gatsby-remark-copy-linked-files'],
+        plugins: [
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-responsive-iframe'
+        ],
       },
     },
     {

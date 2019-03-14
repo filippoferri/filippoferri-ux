@@ -1,0 +1,339 @@
+.content
+
+  .title.has-marked-subtitle
+    font-size: 2rem
+    margin-bottom: 2rem
+
+  .subtitle.is-marked
+    display: inline-block
+    margin: 1.5rem 0
+    position: relative
+    font-family: $family-heading
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 1rem
+    line-height: 2rem
+    padding-right: .5rem
+
+    &:after
+      content: ''
+      position: absolute
+      z-index: -1
+      right: 0
+      bottom: -10px
+      display: block
+      height: 8px
+      width: 100%
+      background-color: $warning
+      margin: 1em 0
+
+
+  &.is-quote
+    font-family: $family-heading
+    font-size: 1.6rem
+    line-height: 1.4
+    text-transform: uppercase
+    margin-bottom: 3rem
+    background-image: url('../img/svg/quote.svg')
+    background-repeat: no-repeat
+    background-position: top left
+    background-size: 22% 68%
+
+    .cite
+      font-family: $family-heading
+      margin-top: 2rem
+      position: relative
+      text-transform: uppercase
+      text-indent: 30px
+      font-size: 1rem
+
+      span
+        text-transform: none
+        color: $grey
+
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 12px
+        border-top: 2px solid #000
+        width: 20px
+        color: black
+
+  h4, h5
+    margin-top: 2rem
+
+
+  img
+    border-radius: .1875rem
+
+  .floating-image
+
+    @media (min-width: $desktop)
+      max-width: 700px
+      position: absolute
+      bottom: 4rem
+      right: 0
+      box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1)
+      z-index: 1
+
+    @media (min-width: $fullhd)
+      max-width: 800px
+      bottom: 5rem
+
+  .floating-stats
+
+    @media (min-width: $desktop)
+      width: 640px
+      position: absolute
+      bottom: 4rem
+      right: 0
+      z-index: 1
+      background-color: white
+      box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1)
+
+    @media (min-width: $fullhd)
+      width: 740px
+
+  span.highlight
+    background-color: $yellow-light
+
+// Blog Block
+.blog-block-image
+  display: block
+  height: 200px
+  position: relative
+  overflow: hidden
+  border-radius: .1875rem
+  background-color: black
+  transition: all .2s ease-in-out
+
+  .gatsby-image-wrapper,
+  .gatsby-image-outer-wrapper
+    height: 100%
+
+    img
+      mix-blend-mode: overlay
+
+  &:hover
+    opacity: .8
+
+.blog-block-title
+  display: block
+  line-height: 1.6
+  margin: 1rem
+
+  &:hover
+    opacity: .8
+
+.case-block-image
+  display: block
+  height: 300px
+  position: relative
+  overflow: hidden
+  border-radius: .1875rem
+  background-color: black
+  transition: all .2s ease-in-out
+
+  .gatsby-image-wrapper,
+  .gatsby-image-outer-wrapper
+    height: 100%
+
+  span
+    display: inline-block
+    position: absolute
+    left: 2rem
+    bottom: 1rem
+    right: 3rem
+    color: white
+    line-height: 1.6
+    text-transform: uppercase
+    font-family: $family-heading
+    font-weight: 600
+    z-index: 10
+    transition: all 100ms ease-in-out
+
+
+  &:hover
+    span
+      bottom: 2rem
+    &:after
+      background-color: rgba(0,0,0,.4)
+
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 5
+    background-color: rgba(0,0,0,0)
+    background-image: linear-gradient(to top, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0))
+    transition: all .2s ease-in-out
+
+// TAGS
+.content
+
+    a.tag
+      transition: all .2s ease-in-out
+
+      &:hover
+        background-color: darken($primary, 5%)
+        text-decoration: none
+
+.featured-post-title
+  display: block
+  padding: 0.5rem 0 2rem
+  font-size: 1.2rem
+  line-height: 1.6
+
+  @media (min-width: $desktop)
+    padding: 0 3rem
+
+.featured-post-image
+  display: block
+  position: relative
+  height: 15rem
+
+  .featured-post-category
+    display: inline-block
+    padding: .5rem 1rem 0
+    position: absolute
+    bottom: 0
+    left: 2rem
+    right: 2rem
+    text-transform: uppercase
+    background: white
+    z-index: 1
+    font-family: $family-heading
+
+    span
+      display: inline-block
+      position: relative
+      padding-right: .5rem
+      font-size: .8rem
+
+      &:after
+        content: ''
+        position: absolute
+        z-index: -1
+        right: 0
+        bottom: 7px
+        display: block
+        height: 8px
+        width: 100%
+        background-color: $warning
+
+// OFFER BLOCK
+.offer-block
+  margin-bottom: 2rem
+
+  img
+    width: 4rem
+    max-height: 3rem
+
+  h3
+    font-weight: 600
+    text-transform: uppercase
+    font-family: $family-heading
+
+  p
+    line-height: 1.6
+    font-size: 1rem
+
+  @media screen and (min-width: $desktop)
+    margin-bottom: 0
+
+    p
+      line-height: 1.4
+      font-size: .8rem
+
+// ARTICLE BOX
+.article-box
+  height: 100%
+  padding: 1rem
+  border: 1px solid $white-bis
+  background: white
+
+  ul
+    li
+      padding: .5em .75em
+
+      @media screen and (min-width: $desktop)
+        font-size: .8rem
+
+// ARTICLE START
+
+// .article-start
+  display: block
+  width: 4rem
+  height: .1rem
+  background: $primary
+  margin: 0 auto 3rem
+
+.article-start
+  display: block
+  width: 1rem
+  height: 1rem
+  background: $primary
+  margin: 0 auto 3rem
+
+
+// ARTICLE END
+.article-end
+  display: block
+  width: 1rem
+  height: 1rem
+  background: $primary
+  margin: 6rem auto 4rem
+
+// SHARE POST
+.is-content-section
+  display: flex
+  align-items: center
+  margin-top: 2rem
+  margin-bottom: 1.5rem
+  padding-top: .5rem
+  padding-bottom: .5rem
+  border-top: 1px solid #e3e3e5
+  border-bottom: 1px solid #e3e3e5
+  font-size: .8rem
+  font-family: $family-heading
+  color: $grey
+
+  div
+    flex: 1 1 auto
+
+  .social-share
+
+    img
+      width: 2rem
+      height: 2rem
+
+    .button
+      border: 0
+      padding: 0
+      margin: 0 .2rem
+
+      &:focus
+        border: 0
+        padding: 0
+        box-shadow: none
+
+
+.floating-block
+  padding: 1rem
+  border-radius: $b-radius
+
+  @media (min-width: $desktop)
+    padding: 3rem
+    transform: translateY(-6rem)
+
+  &.has-shadow
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1)
+
+.gray-filter
+  filter: grayscale(1)

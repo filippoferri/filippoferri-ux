@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { HomePageTemplate } from '../../templates/home-page'
+import { IndexPageTemplate } from '../../templates/home-page'
 
 const HomePagePreview = ({ entry }) => (
-  <HomePageTemplate
+  <IndexPageTemplate
     title={entry.getIn(['data', 'title'])}
     subtitle={entry.getIn(['data', 'subtitle'])}
   />
