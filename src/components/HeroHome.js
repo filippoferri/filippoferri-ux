@@ -14,11 +14,8 @@ const HeroHome = ({ image, heading, addClass }) => (
       <div className="container">
         <div className="columns">
           <div className="column is-6-desktop is-offset-1-desktop">
-            <div>
-              {/*
-              <img className="img-heading" src={Title} alt="" style={{ width: "100%" }}/>
-              */}
-              <h1 className="title has-highlight has-text-centered has-text-left-desktop">{heading}</h1>
+            <div className="content">
+              <h1 className="title is-1 has-text-centered has-text-left-desktop is-uppercase">{heading}</h1>
             </div>
           </div>
         </div>

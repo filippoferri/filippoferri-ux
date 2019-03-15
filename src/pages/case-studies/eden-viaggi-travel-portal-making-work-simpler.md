@@ -82,4 +82,4 @@ After a few iterations and about many tests, I was able to come up with the idea
 ![Perfect Pixel](/img/edenviaggitravelportal-perfectpixel.jpg)
 
 ###Conclusion
-It was a successful design challenge, and the company saw significant improvements in portal performance. Iterative user research and prototyping led to a final product that increases ... and reduces ... from 12% to 1%. The portal is used by 20,000+ agents in Italy on daily basis and receives 2+ million visits per month. Currently, I'm working on improving interaction elements based on continued review feedback and analytics tracking.
+It was a successful design challenge, and the company saw significant improvements in portal performance. Iterative user research and prototyping led to a final product that increased usability value from 32% to 85%. The portal is used by 20,000+ agents in Italy on daily basis and receives 2+ million visits per month. Currently, I'm working on improving interaction elements based on continued review feedback and analytics tracking.
