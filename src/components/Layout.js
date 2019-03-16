@@ -1,8 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Link } from "gatsby";
 
-import CookieConsent from 'react-cookie-consent';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -21,20 +19,6 @@ const TemplateWrapper = ({ children }) => (
       </div>
     </section>
     <Footer/>
-
-    <CookieConsent
-      location="bottom"
-      acceptOnScroll={true}
-      acceptOnScrollPercentage={25}
-      cookieName="filippoferri.it"
-      disableStyles={true}
-      buttonClasses="sh-cookie-bar-close"
-      containerClasses="sh-cookie-bar-container"
-      contentClasses=""
-      buttonText="Close"
-      extraCookieOptions={{domain: '//studenthotels.it'}}>
-      This website uses cookies. Click  <Link to="/legals/privacy-policy">here</Link> for more information. If that’s okay with you, just keep browsing.
-    </CookieConsent>
   </div>
 )
 
