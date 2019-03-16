@@ -28,7 +28,7 @@ export const ContactPageTemplate = ({ title }) => {
         </div>
 
         <img
-          className="hero-img reduced is-hidden-touch"
+          className="hero-img reduced"
           src={Frog}
           alt="Let's jump, but no kisses please!"
         />
