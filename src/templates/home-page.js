@@ -99,7 +99,7 @@ export const IndexPageTemplate = ({ cases, articles }) => {
             <div className="column is-6-tablet">
               <div className="content">
                 <p className="subtitle is-marked">My Approach</p>
-                <h2 className="title has-marked-subtitle">Translate needs of users into delightful product experiences</h2>
+                <h2 className="title has-marked-subtitle">Translate <br/>user needs<br/> into product <br/>experiences</h2>
               </div>
             </div>
           </div>

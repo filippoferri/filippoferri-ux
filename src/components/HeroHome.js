@@ -13,9 +13,9 @@ const HeroHome = ({ image, heading, addClass }) => (
     <div className="hero-body">
       <div className="container">
         <div className="columns">
-          <div className="column is-6-desktop is-offset-1-desktop">
+          <div className="column is-6-desktop">
             <div className="content">
-              <h1 className="title is-1 has-text-centered has-text-left-desktop is-uppercase">{heading}</h1>
+              <h1 className="title is-1 has-text-centered has-text-left-desktop">Skyrocket <br/><span className="highlight primary">User Satisfaction</span><br/>And Conversions</h1>
             </div>
           </div>
         </div>
