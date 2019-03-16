@@ -14,9 +14,9 @@ export const ContactPageTemplate = ({ title }) => {
         <div className="hero-body">
           <div className="container">
             <div className="columns">
-              <div className="column is-6-desktop is-offset-1-desktop">
+              <div className="column is-6-desktop">
                 <div className="content">
-                  <h1 className="title is-1 is-uppercase">{title}</h1>
+                  <h1 className="title is-1">{title}</h1>
                   <p><a href="mailto:hello@filippoferri.it" title="Let's chat"
                         target="_blank" rel="noopener noreferrer">hello@filippoferri.it</a><br/>
                     <a href="tel:+393286272410" title="Let's chat" target="_blank"
