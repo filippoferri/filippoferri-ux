@@ -39,15 +39,23 @@
       width: 750px
       transform: translateX(0)
 
-      &.reduced
-        right: 10%
+    &.reduced
+      right: 0
+      width: 350px
+      transform: translateX(0)
+
+      @media (min-width: $tablet)
+        width: 480px
+
+      @media (min-width: $desktop)
         width: 540px
+        right: 10%
+
 
     @media (min-width: $fullhd)
       width: 1020px
 
   &.background-image.is-fullheight-with-navbar
-    min-height: calc(100vh - 9rem)
 
     .hero-body
       align-items: flex-start

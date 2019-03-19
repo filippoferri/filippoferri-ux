@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import HeroHome from "../components/HeroHome";
 import FeaturedCases from "../components/FeaturedCases";
-// import LatestPosts from "../components/LatestPosts";
+//import LatestPosts from "../components/LatestPosts";
 
 import Icon1 from "../img/svg/product-design.svg";
 import Icon2 from "../img/svg/user-research.svg";
