@@ -11,6 +11,8 @@ tags:
   - Web App
 heroImage: ../../img/chemex.jpg
 ---
+
+
 Alcune volte mi è capitato di essere coinvolto in progetti dove gli obiettivi erano molto vaghi, le richieste passavano dal voler vendere di più all'avere più traffico con un perentorio: adesso fate voi! Chiaramente senza quantificare gli obiettivi e con un così ampio spettro di azioni, ogni intervento sarebbe stato fallimentare in partenza.
 
 Per questo è sempre importante mettere in chiaro da subito i KPI, Key Performance Indicators, ovvero gli indicatori di prestazione, l'insieme degli indicatori che permettono di misurare le attività o i processi svolti dagli utenti.

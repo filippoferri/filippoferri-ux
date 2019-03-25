@@ -32,12 +32,14 @@ const LatestPosts = ({ posts }) => {
   return (
     <section className="section has-margin-bottom-large">
       <div className="container">
-        <div className="columns is-multiline is-variable is-8-desktop">
+        <div className="columns is-multiline is-variable is-8-desktop is-baligned">
           <div className="column is-6-tablet">
-            <h3 className="title">Speaking</h3>
+            <div className="content">
+              <h3 className="title has-marked-subtitle">Tips<br/>about<br/>product</h3>
+            </div>
           </div>
           <div className="column is-6-tablet has-text-right">
-            <Link className="button is-primary" to={"/blog"}>All articles</Link>
+            <Link className="button is-primary has-margin-bottom" to={"/blog"}>All articles</Link>
           </div>
 
           {articles

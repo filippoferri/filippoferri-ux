@@ -55,7 +55,7 @@ export default class BlogPage extends React.Component {
         </section>
         <section className="section">
           <div className="container">
-            <div className="columns">
+            <div className="columns is-multiline">
               {posts
                 .map(({ node: post }, index) => (
                   <div key={index} className="column is-6-tablet is-4-desktop">

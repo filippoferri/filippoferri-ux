@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import HeroHome from "../components/HeroHome";
 import FeaturedCases from "../components/FeaturedCases";
-//import LatestPosts from "../components/LatestPosts";
+import LatestPosts from "../components/LatestPosts";
 
 import Icon1 from "../img/svg/product-design.svg";
 import Icon2 from "../img/svg/user-research.svg";
@@ -99,7 +99,7 @@ export const IndexPageTemplate = ({ cases, articles }) => {
             <div className="column is-6-tablet">
               <div className="content">
                 <p className="subtitle is-marked">My Approach</p>
-                <h2 className="title has-marked-subtitle">Translate <br/>user needs<br/> into product <br/>experiences</h2>
+                <h3 className="title has-marked-subtitle">Translate <br/>user needs<br/> into product <br/>experiences</h3>
               </div>
             </div>
           </div>
@@ -123,9 +123,7 @@ export const IndexPageTemplate = ({ cases, articles }) => {
         </div>
       </section>
 
-      {/*
       <LatestPosts posts={articles}/>
-      */}
 
     </Layout>
   );
@@ -164,7 +162,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
-            date(formatString: "DD MMMM, YYYY", locale: "it")
+            date(formatString: "DD MMMM YYYY")
             heroImage {
               childImageSharp {
                 sizes(maxWidth: 800) {

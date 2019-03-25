@@ -60,12 +60,22 @@
         width: 20px
         color: black
 
+
+  h2, h3
+    font-size: 1.5rem
+
   h4, h5
     margin-top: 2rem
 
 
   img
     border-radius: .1875rem
+
+  &.post img
+
+    @media (min-width: $desktop)
+      margin: 7rem 0
+      transform: scale(1.4)
 
   .floating-image
 
@@ -97,6 +107,7 @@
 
   span.highlight
     background-color: $yellow-light
+    padding: 0 5px
 
     &.primary
       background-color: $yellow

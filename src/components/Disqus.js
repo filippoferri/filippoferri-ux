@@ -19,7 +19,7 @@ class addDisqus extends React.Component {
         <div className="column is-8-desktop is-offset-2-desktop has-text-centered">
           <div className="sh-block-icon"><img src={Conversation} alt="Mostra la conversazione"/></div>
           <button onClick={() => this.setState({ conversation: true })} type="button"
-                  className="button is-primary has-text-black">Mostra la conversazione
+                  className="button is-primary has-text-black">Show the conversation
           </button>
         </div>
       </div>);

@@ -15,7 +15,7 @@ const Hero = ({ image, heading, addClass, category }) => (
               </div>
             </div>
           </div>
-          <div className="column is-6-desktop is-offset-1-desktop">
+          <div className="column is-6-desktop">
             {image ?
               <div className="is-image-wrapper is-bordered"><Img sizes={image}/></div>
               : null}

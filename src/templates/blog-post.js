@@ -43,14 +43,12 @@ export const BlogPostTemplate = ({
 
       <section className="section">
 
-        <div className="container content">
+        <div className="container content post">
           <div className="columns">
-            <div className="column is-8 is-offset-2">
+            <div className="column is-10-tablet is-offset-1-tablet is-6-desktop is-offset-3-desktop">
 
               <p><i>{description}</i></p>
-              <p><i>{currentId}</i></p>
-              <p><i>{nextId}</i></p>
-              <p><i>{prevId}</i></p>
+
               <PostContent content={content}/>
 
               <div className="is-content-section">
@@ -60,7 +58,7 @@ export const BlogPostTemplate = ({
 
               {tags && tags.length ? (
                 <div>
-                  <p className="menu-label">Ho parlato di:</p>
+                  <p className="menu-label">A story about:</p>
                   <div className="tags are-medium">
                     {tags.map((tag, index) => (
                       <Link key={index} className="tag is-primary has-text-black"
@@ -179,7 +177,7 @@ export const pageQuery = graphql`
       }
       html
       frontmatter {
-        date(formatString: "DD MMMM, YYYY", locale: "it")
+        date(formatString: "DD MMMM YYYY")
         title
         description
         category

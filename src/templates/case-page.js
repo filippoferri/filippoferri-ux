@@ -28,7 +28,7 @@ export const CasePageTemplate = ({
       <section className="section has-border-bottom">
         <div className="container">
           <div className="columns">
-            <div className="column is-8-desktop is-offset-2-desktop">
+            <div className="column is-10-tablet is-offset-1-tablet is-6-desktop is-offset-3-desktop">
               <div className="article-start"></div>
               <h2 className="title">Overview</h2>
               <p>{overview}</p>
@@ -82,9 +82,9 @@ export const CasePageTemplate = ({
 
       <section className="section">
 
-        <div className="container content">
+        <div className="container content post">
           <div className="columns">
-            <div className="column is-8-desktop is-offset-2-desktop">
+            <div className="column is-10-tablet is-offset-1-tablet is-6-desktop is-offset-3-desktop">
               <PostContent content={content}/>
               <div className="article-end"></div>
             </div>
