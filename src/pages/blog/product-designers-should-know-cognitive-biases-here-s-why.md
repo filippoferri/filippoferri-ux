@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: "Product Designers Should Know Cognitive Biases: Here’s Why"
+title: "Product Designers Should Know Cognitive Biases: Here's Why"
 date: 2019-03-22T15:00:00.000Z
 description: We can easily say that humans are easily affected by their surroundings. Even though we are considered as strong being, we are not strong enough when it comes to handling our emotions. We are easily influenced by other people’s action, words and their wrongdoing. The context affects us in a way that our thinking process is totally dependent on it.
 category: User Experience
@@ -8,9 +8,9 @@ tags:
   - Persuasion
   - Psychology
   - eCommerce
-heroImage: ../../img/chemex.jpg
+heroImage: ../../img/jpg/cognitive-biases-filippoferri.jpg
 ---
-![Perfect Pixel for Relocatly](/img/chemex.jpg)
+![Importance of cognitive biases](/img/importance-of-cognitive-biases-filippoferri.jpg)
 But what exactly influences our behavior? An answer can be Cognitive Biases. A cognitive bias is a limitation in our objective thinking when we are processing information from around us. It affects the judgments and decisions we make and can cause wrong conclusions or choices.
 
 ##Importance of Cognitive Biases
@@ -37,6 +37,8 @@ The following is a selection of cognitive biases - the entire list counts more t
 **Confirmation Bias:** it's the idea that people try to seek out information that only confirms their opinions and they ignore all the information that opposes their beliefs.
 
 These cognitive biases have been proven to work for a variety of eCommerce applications.
+
+![Cognitive biases on Wikipedia](https://upload.wikimedia.org/wikipedia/commons/1/18/Cognitive_Bias_Codex_-_180%2B_biases%2C_designed_by_John_Manoogian_III_%28jm3%29.jpg)
 
 ##Why Should We Know Cognitive Biases?
 Many organizations are investing time and money increasingly to investigate new forms of persuasion taking advantage of cognitive biases.

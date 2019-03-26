@@ -6,31 +6,6 @@ import Img from "gatsby-image";
 
 export default class BlogPage extends React.Component {
 
-  variation(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  addClass() {
-    var newclass;
-    const num = this.variation(1, 4);
-
-    switch (num) {
-      case 1:
-        newclass = " is-secondary";
-        break;
-      case 2:
-        newclass = " is-greenish";
-        break;
-      case 3:
-        newclass = " is-sunset";
-        break;
-      default:
-        newclass = " is-primary";
-    }
-
-    return newclass;
-  }
-
   findImage(image, title) {
     return <div className="is-image-wrapper has-position-absolute is-bordered"><Img sizes={image} alt={title} /></div>
   }
@@ -60,7 +35,7 @@ export default class BlogPage extends React.Component {
                 .map(({ node: post }, index) => (
                   <div key={index} className="column is-6-tablet is-4-desktop">
                     <article>
-                      <Link to={post.fields.slug} className={"blog-block-image is-paddingless" + this.addClass()}>{this.findImage(post.frontmatter.heroImage.childImageSharp.sizes, post.frontmatter.title)}</Link>
+                      <Link to={post.fields.slug} className={"blog-block-image is-paddingless"}>{this.findImage(post.frontmatter.heroImage.childImageSharp.sizes, post.frontmatter.title)}</Link>
                       <Link to={post.fields.slug} className="blog-block-title">{post.frontmatter.title}</Link>
                     </article>
                   </div>

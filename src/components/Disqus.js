@@ -26,7 +26,7 @@ class addDisqus extends React.Component {
   }
 
   getDisqus() {
-    const disqusShortname = "filippoferri-it";
+    const disqusShortname = "filippo-ferri";
     const disqusConfig = {
       url: this.props.url,
       identifier: this.props.title,
