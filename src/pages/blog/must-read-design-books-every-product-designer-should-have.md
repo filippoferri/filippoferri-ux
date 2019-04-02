@@ -34,8 +34,8 @@ This book offers a reliable method for solving problems quickly. Facilitating a 
 This book, based on research about how people think, learn and decide, it's a handy reference for any user experience or visual designer. It is well organized, full of visuals and stories, and combines research from social psychology, neuroscience, and business.
 
 ###5. 101 UX Principles
-![101 UX Principles](/img/101-ux-principles-filippoferri.jpg) (<a href="https://amzn.to/2UWP8Eg" target="_blank">Amazon</a>)<br/>
-*101 UX Principles by Will Grant*
+![101 UX Principles](/img/101-ux-principles-filippoferri.jpg)
+**101 UX Principles by Will Grant** (<a href="https://amzn.to/2UWP8Eg" target="_blank">Amazon</a>)<br/>
 Will Grant covers a lot of important concepts about UX, all supported by specific examples, technical considerations, common design mistakes, and personal opinions. Most of the tips we can directly apply to our daily UX job.
 
 ###6. Thinking, Fast and Slow

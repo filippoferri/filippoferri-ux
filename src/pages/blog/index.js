@@ -73,7 +73,7 @@ export const pageQuery = graphql`
             title
             description
             templateKey
-            date(formatString: "DD MMMM, YYYY", locale: "it")
+            date(formatString: "DD MMMM YYYY")
             heroImage {
               childImageSharp {
                 sizes(maxWidth: 400) {
