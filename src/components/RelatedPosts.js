@@ -30,7 +30,7 @@ const RelatedPosts = ({
             <BackgroundImage image={prevHeroImage.childImageSharp.sizes}/>
             <Link to={prevSlug} className="related-post-link"></Link>
             <div className="related-post-title">
-              <div className="related-post-label">Articolo precedente</div>
+              <div className="related-post-label">Previous article</div>
               {prevTitle}
               </div>
           </div>
@@ -38,7 +38,7 @@ const RelatedPosts = ({
             <BackgroundImage image={nextHeroImage.childImageSharp.sizes}/>
             <Link to={nextSlug} className="related-post-link"></Link>
             <div className="related-post-title">
-              <div className="related-post-label">Articolo successivo</div>
+              <div className="related-post-label">Next article</div>
               {nextTitle}</div>
           </div>
         </div>

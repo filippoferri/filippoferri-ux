@@ -3,15 +3,15 @@ templateKey: blog-post
 title: "Product Designers Should Know Cognitive Biases: Here's Why"
 date: 2019-03-22T15:00:00.000Z
 description: We can easily say that humans are easily affected by their surroundings. Even though we are considered as strong being, we are not strong enough when it comes to handling our emotions. We are easily influenced by other people’s action, words and their wrongdoing. The context affects us in a way that our thinking process is totally dependent on it.
-category: User Experience
+category: Neuromarketing
 tags:
   - Persuasion
-  - Psychology
   - eCommerce
+  - Consumer Behaviour
 heroImage: ../../img/jpg/cognitive-biases-filippoferri.jpg
 ---
 ![Importance of cognitive biases](/img/importance-of-cognitive-biases-filippoferri.jpg)
-But what exactly influences our behavior? An answer can be Cognitive Biases. A cognitive bias is a limitation in our objective thinking when we are processing information from around us. It affects the judgments and decisions we make and can cause wrong conclusions or choices.
+But what exactly influences our behavior? A psychological answer is: Cognitive Biases. A cognitive bias is a limitation in our objective thinking when we are processing information from around us. It affects the judgments and decisions we make and can cause wrong conclusions or choices.
 
 ##Importance of Cognitive Biases
 Different types of cognitive biases affect individuals differently. They can influence a person’s ability for critical thinking and decision-making. Every person perceives information surrounding him individually, which, in turn, changes him to make different decisions than the others.

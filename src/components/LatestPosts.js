@@ -41,7 +41,8 @@ const LatestPosts = ({ posts }) => {
           <div className="column is-6-tablet has-text-right">
             <Link className="button is-primary has-margin-bottom" to={"/blog"}>All articles</Link>
           </div>
-
+        </div>
+        <div className="columns is-multiline is-variable is-8-desktop">
           {articles
             .map((article,index) => (
               <Article key={index} article={article}/>
