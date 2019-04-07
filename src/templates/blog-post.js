@@ -61,7 +61,7 @@ export const BlogPostTemplate = ({
                   <p className="menu-label">A story about:</p>
                   <div className="tags are-medium">
                     {tags.map((tag, index) => (
-                      <Link key={index} className="tag is-primary has-text-black"
+                      <Link key={index} className="tag has-text-black"
                             to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                     ))}
                   </div>
