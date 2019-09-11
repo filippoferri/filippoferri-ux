@@ -24,7 +24,7 @@ class Navbar extends React.Component {
 
     return (
       <nav className="navbar has-background-white is-transparent">
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item">
               FF

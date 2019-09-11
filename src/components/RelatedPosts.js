@@ -51,7 +51,7 @@ const RelatedPosts = ({
 
           <Link className="related-post-link" to={nextSlug}></Link>
 
-          <div className="container">
+          <div className="container is-widescreen">
             <div className="columns">
               <div className="column is-6-desktop is-offset-2-desktop is-centered">
                 <div className="related-post-label">Next Article</div>
@@ -69,7 +69,7 @@ const RelatedPosts = ({
 
           <Link className="related-post-link" to={prevSlug}></Link>
 
-          <div className="container">
+          <div className="container is-widescreen">
             <div className="columns">
               <div className="column is-6-desktop is-offset-2-desktop is-centered">
                 <div className="related-post-label">Previous Article</div>

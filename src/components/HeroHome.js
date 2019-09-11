@@ -11,7 +11,7 @@ const HeroHome = ({ image, heading, addClass }) => (
       <div className="is-image-wrapper has-position-absolute"><Img sizes={image}/></div>
       : null}
     <div className="hero-body">
-      <div className="container">
+      <div className="container is-widescreen">
         <div className="columns">
           <div className="column is-6-desktop">
             <div className="content">

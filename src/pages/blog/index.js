@@ -17,7 +17,7 @@ export default class BlogPage extends React.Component {
     return (
       <Layout>
         <section className="section">
-          <div className="container">
+          <div className="container is-widescreen">
             <div className="columns">
               <div className="column is-4-desktop is-offset-1-desktop">
             <div className="content">
@@ -29,7 +29,7 @@ export default class BlogPage extends React.Component {
           </div>
         </section>
         <section className="section">
-          <div className="container">
+          <div className="container is-widescreen">
             <div className="columns is-multiline">
               {posts
                 .map(({ node: post }, index) => (

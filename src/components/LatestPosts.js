@@ -31,7 +31,7 @@ const LatestPosts = ({ posts }) => {
 
   return (
     <section className="section has-margin-bottom-large">
-      <div className="container">
+      <div className="container is-widescreen">
         <div className="columns is-multiline is-variable is-8-desktop is-baligned">
           <div className="column is-6-tablet">
             <div className="content">

@@ -5,7 +5,7 @@ const Hero = ({ image, heading, addClass, category }) => (
 
   <section className={"hero has-spaced" + (addClass ? " " + addClass : "")}>
     <div className="hero-body">
-      <div className="container">
+      <div className="container is-widescreen">
         <div className="columns is-variable is-0-desktop">
           <div className="column is-6-desktop">
             <div className="title-wrapper">

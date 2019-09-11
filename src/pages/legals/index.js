@@ -11,7 +11,7 @@ export default class LegalsPage extends React.Component {
     return (
       <Layout>
         <section className="section">
-          <div className="container">
+          <div className="container is-widescreen">
             <div className="content has-text-centered">
               <h3 className="">Legal notice</h3>
             </div>
