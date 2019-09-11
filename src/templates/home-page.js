@@ -24,7 +24,7 @@ export const IndexPageTemplate = ({ cases, articles }) => {
 
       <section className="section is-medium has-background-primary">
 
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns is-variable is-12">
             <div className="column has-text-centered">
               <div className="offer-block">
@@ -60,7 +60,7 @@ export const IndexPageTemplate = ({ cases, articles }) => {
       </section>
 
       <section className="section">
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns is-multiline is-vcentered">
             <div className="column is-half-tablet is-5-desktop">
               <div className="content">
@@ -78,7 +78,7 @@ export const IndexPageTemplate = ({ cases, articles }) => {
       </section>
 
       <section className="section is-small">
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns">
             <div className="column is-8-desktop is-offset-2-desktop">
               <div className="content is-quote">
@@ -94,7 +94,7 @@ export const IndexPageTemplate = ({ cases, articles }) => {
       <FeaturedCases cases={cases}/>
 
       <section className="section">
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns">
             <div className="column is-6-tablet">
               <div className="content">

@@ -12,7 +12,7 @@ export const ContactPageTemplate = ({ title }) => {
       <section className="hero background-image is-fullheight-with-navbar">
 
         <div className="hero-body">
-          <div className="container">
+          <div className="container is-widescreen">
             <div className="columns">
               <div className="column is-6-desktop">
                 <div className="content">

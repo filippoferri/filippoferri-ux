@@ -26,7 +26,7 @@ export const CasePageTemplate = ({
       <Hero image={heroImage.childImageSharp.sizes} heading={title} addClass="is-post" category="case study"/>
 
       <section className="section has-border-bottom">
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns">
             <div className="column is-10-tablet is-offset-1-tablet is-6-desktop is-offset-3-desktop">
               <div className="article-start"></div>
@@ -38,7 +38,7 @@ export const CasePageTemplate = ({
       </section>
 
       <section className="section has-background-primary">
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns">
             <div className="column is-4-desktop">
               <div className="article-box">

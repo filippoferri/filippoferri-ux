@@ -89,7 +89,7 @@ export const BlogPostTemplate = ({
       />
 
       <section className="section is-medium" name="conversation">
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns">
             <div className="column is-8-desktop is-offset-2-desktop has-margin-bottom">
 

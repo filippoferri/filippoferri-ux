@@ -11,7 +11,7 @@ export const DefaultPageTemplate = ({ title, content, contentComponent }) => {
   return (
     <main>
       <section className="section section--gradient">
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns">
             <div className="column is-8-desktop is-offset-2-desktop">
               <div className="section">

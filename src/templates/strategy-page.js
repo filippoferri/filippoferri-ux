@@ -17,7 +17,7 @@ export const StrategyPageTemplate = ({ title, description }) => {
   return (
     <Layout>
       <section className="section" style={{ marginBottom: "4rem" }}>
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns">
             <div className="column is-6-desktop is-offset-1-desktop">
               <div className="content">
@@ -32,7 +32,7 @@ export const StrategyPageTemplate = ({ title, description }) => {
 
         <div className="is-image-wrapper has-position-absolute"><img src={planImg} alt="Planning"/></div>
 
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns">
             <div className="column is-6-desktop is-offset-6-desktop">
               <div className="floating-block has-background-primary has-shadow">
@@ -44,7 +44,7 @@ export const StrategyPageTemplate = ({ title, description }) => {
         </div>
       </section>
       <section className="section is-medium">
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns is-multiline">
             <div className="column is-two-third-tablet is-5-desktop">
               <div className="content">
@@ -64,7 +64,7 @@ export const StrategyPageTemplate = ({ title, description }) => {
 
         <div className="is-image-wrapper has-position-absolute"><img src={reorgImg} alt="Reorganization"/></div>
 
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns">
             <div className="column is-6-desktop">
               <div className="floating-block has-background-white has-shadow">
@@ -76,7 +76,7 @@ export const StrategyPageTemplate = ({ title, description }) => {
         </div>
       </section>
       <section className="section is-medium">
-        <div className="container">
+        <div className="container is-widescreen">
           <div className="columns">
             <div className="column is-6-desktop is-offset-3-desktop">
               <div className="has-text-centered content" style={{ marginBottom: "4rem" }}>
