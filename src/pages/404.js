@@ -7,7 +7,7 @@ const NotFoundPage = () => (
   <Layout>
     <section className="section">
       <div className="columns is-multiline">
-        <div className="container content">
+        <div className="container is-widescreen content">
           <div className="column has-text-centered">
             <img src={error} alt="404"/>
             <p>You just hit a route that doesn&#39;t exist... the sadness.</p>

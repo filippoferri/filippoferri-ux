@@ -43,7 +43,7 @@ export const BlogPostTemplate = ({
 
       <section className="section">
 
-        <div className="container content post">
+        <div className="container is-widescreen content post">
           <div className="columns">
             <div className="column is-10-tablet is-offset-1-tablet is-6-desktop is-offset-3-desktop">
 
