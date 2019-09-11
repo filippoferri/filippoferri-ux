@@ -39,6 +39,9 @@
       width: 750px
       transform: translateX(0)
 
+    @media (min-width: $fullhd)
+      width: 1020px
+
     &.reduced
       right: 0
       width: 350px
@@ -51,9 +54,8 @@
         width: 540px
         right: 10%
 
-
-    @media (min-width: 1600px)
-      width: 1020px
+      @media (min-width: $fullhd)
+        width: 800px
 
   &.background-image.is-fullheight-with-navbar
 
