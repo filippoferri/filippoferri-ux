@@ -17,10 +17,9 @@ export const ContactPageTemplate = ({ title }) => {
               <div className="column is-6-desktop">
                 <div className="content">
                   <h1 className="title is-1">{title}</h1>
-                  <p><a href="mailto:hello@filippoferri.it" title="Let's chat"
-                        target="_blank" rel="noopener noreferrer">hello@filippoferri.it</a><br/>
-                    <a href="tel:+393286272410" title="Let's chat" target="_blank"
-                        rel="noopener noreferrer">(+39) 328 627 2410</a></p>
+                  <p>
+                    <a href="https://calendly.com/filippoferri/30min" title="Let's talk" target="_blank"
+                        rel="noopener noreferrer">30-Minutes Meeting</a></p>
                 </div>
               </div>
             </div>

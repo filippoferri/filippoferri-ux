@@ -15,7 +15,7 @@ const TemplateWrapper = ({ children }) => (
       <div className="container is-widescreen has-text-centered">
         <h4 className="title is-4 is-uppercase">Get in touch</h4>
         <p className="has-margin-bottom">If you’d like to pick my brain or discuss<br/> about Product, I’ll be happy to talk with you.</p>
-        <a href="mailto:hello@filippoferri.it" className="button is-primary" target="_blank" rel="noopener noreferrer" >Send a message</a>
+        <a href="https://calendly.com/filippoferri/30min" className="button is-primary" target="_blank" rel="noopener noreferrer" >Let's talk</a>
       </div>
     </section>
     <Footer/>
